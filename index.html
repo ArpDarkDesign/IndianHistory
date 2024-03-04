@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India's Rich History</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap">
+
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: #fff;
+            /* Background color */
+            color: #333;
+            /* Text color */
+            font-family: Arial, sans-serif;
+            /* Font family */
+            margin: 0;
+            /* Remove default margin */
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        header {
+            background-color: #ff9933;
+            /* Header background color (Saffron) */
+            color: #fff;
+            /* Header text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Add your CSS styles here */
+        body {
+            background-color: #fff;
+            /* Background color */
+            color: #333;
+            /* Text color */
+            font-family: 'Open Sans', sans-serif;
+            /* Use Google Font 'Open Sans' for body text */
+            margin: 0;
+            /* Remove default margin */
+            padding: 0;
+            /* Remove default padding */
+            font-size: 18px;
+            /* Increase font size */
+        }
+
+        header {
+            background-color: #ff9933;
+            /* Header background color (Saffron) */
+            color: #fff;
+            /* Header text color */
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            /* Increase header font size */
+        }
+
+
+        header {
+            background-color: #ff9933;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+
+        /* Navigation styles */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        /* Style for navigation links on hover */
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: darkblue;
+        }
+
+        /* Style for list items */
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        /* Style for footer */
+        footer {
+            background-color: #009933;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            /* Add more styling as needed */
+        }
+
+        /* Introduction section */
+        .introduction-theme {
+            background-color: #009933;
+            /* Introduction section background color (Green) */
+            color: #fff;
+            /* Introduction section text color */
+            padding: 20px;
+        }
+
+        /* Card styles */
+        .card {
+            /* background-color: #; */
+            background: linear-gradient(45deg, #ff9933, #ffffff, #009933);
+            /* Adjust colors as needed */
+            /* Card background color */
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            animation: fade-in 1s ease-in-out both;
+            /* Add animations */
+        }
+
+        /* Event content styles */
+        .event-content {
+            margin-top: 10px;
+            padding-left: 20px;
+            border-left: 2px solid #009933;
+            /* Left border color (Green) */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #009933;
+            /* Footer background color (Green) */
+            color: #fff;
+            /* Footer text color */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Navigation icon styles */
+        nav ul li a i {
+            margin-right: 5px;
+        }
+
+        /* Add Font Awesome icon styles */
+        .fa-home::before {
+            content: "\f015";
+            /* Home icon */
+        }
+
+        .fa-history::before {
+            content: "\f1da";
+            /* History icon */
+        }
+
+        .fa-fort-awesome::before {
+            content: "\f286";
+            /* Fort Awesome icon */
+        }
+
+        .fa-tower::before {
+            content: "\f5fc";
+            /* Tower icon */
+        }
+
+        .fa-book::before {
+            content: "\f02d";
+            /* Book icon */
+        }
+
+        .fa-envelope::before {
+            content: "\f0e0";
+            /* Envelope icon */
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #resources {
+            background: linear-gradient(45deg, #ff9933, #ffffff, #009933);
+            /* Adjust colors as needed */
+
+        }
+
+        /* Style for the image modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        /* Media Query for screens smaller than 768px (tablets and phones) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                /* Adjust font size for smaller screens */
+            }
+
+            header {
+                padding: 10px;
+                /* Adjust header padding */
+            }
+
+
+            /* Rest of your existing CSS styles... */
+
+
+            nav ul li {
+                margin-right: 10px;
+                /* Adjust margin for navigation links */
+            }
+        }
+
+        /* Media Query for screens smaller than 576px (phones) */
+        @media (max-width: 576px) {
+            header {
+                text-align: center;
+            }
+
+            nav ul {
+                display: block;
+                /* Make navigation links stack vertically */
+            }
+
+            nav ul li {
+                display: block;
+                /* Make each navigation item a block */
+                margin-right: 0;
+                /* Remove right margin */
+                margin-bottom: 10px;
+                /* Add bottom margin for spacing */
+            }
+        }
+
+
+        /* Add this code to your existing <style> section in the <head> of your HTML document */
+        body {
+            /* background: linear-gradient(45deg, #ff9933, #ffffff,#009933);  */
+            background: #fff;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+        }
+
+        /* Add this to your CSS for mobile navigation */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 2560px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav ul.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>India's Rich History</h1>
+
+        <nav><!-- Add this inside your <nav> element -->
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="#introduction"><i class="fas fa-home"></i> Introduction</a></li>
+                <li><a href="#ancient-india"><i class="fas fa-history"></i> Ancient India</a></li>
+                <li><a href="#medieval-india"><i class="fas fa-fort-awesome"></i> Medieval India</a></li>
+                <li><a href="#modern-india"><i class="fas fa-tower"></i> Modern India</a></li>
+                <li><a href="#resources"><i class="fas fa-book"></i> Resources</a></li>
+                <!-- <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduction" class="introduction-theme">
+        <h2>Introduction</h2>
+        <!-- <img src="intro.jpeg" alt="Introduction Image" class="image"> -->
+        <p>Welcome to the world of India's rich and diverse history. India's history spans thousands of years and is
+            marked by incredible achievements in various fields such as art, culture, science, and philosophy. <br>
+            Explore the tapestry of India's past through the following historical periods:</p>
+    </section>
+
+
+    <section id="ancient-india" class="card">
+        <!-- <h2>Ancient India</h2> -->
+        <!-- <img src="ancient.jpeg" alt="Ancient India Image" class="image"> -->
+        <p>Ancient India boasts a remarkable history, from the Indus Valley Civilization to the Maurya and Gupta
+            Empires. Explore the contributions of ancient Indian civilization to mathematics, astronomy, and more.</p>
+        <h3>Major Events in Ancient India</h3>
+        <ul>
+            <li>The Indus Valley Civilization (around 3300–1300 BCE)</li>
+            <li>The Vedic Period and development of Hinduism</li>
+            <li>The Maurya Empire under Emperor Ashoka (3rd century BCE)</li>
+            <li>The Golden Age of Gupta Empire (4th to 6th centuries CE)</li>
+        </ul>
+        <!-- Content for The Indus Valley Civilization -->
+        <div class="event-content">
+            <h4>The Indus Valley Civilization (around 3300–1300 BCE)</h4>
+            <p>The Indus Valley Civilization, one of the world's oldest urban civilizations, thrived in the northwestern
+                regions of the Indian subcontinent. Known for its well-planned cities like Mohenjo-Daro and Harappa,
+                this civilization had a sophisticated drainage system, a script that remains undeciphered, and a
+                thriving trade network.</p>
+        </div>
+
+        <!-- Content for The Vedic Period and development of Hinduism -->
+        <div class="event-content">
+            <h4>The Vedic Period and development of Hinduism</h4>
+            <p>The Vedic Period marked the introduction of sacred texts known as the Vedas. It was during this time that
+                Hinduism, one of the world's oldest religions, began to take shape. The Vedas laid the foundation for
+                Hindu philosophy, rituals, and beliefs.</p>
+        </div>
+
+        <!-- Content for The Maurya Empire under Emperor Ashoka -->
+        <div class="event-content">
+            <h4>The Maurya Empire under Emperor Ashoka (3rd century BCE)</h4>
+            <p>Emperor Ashoka, one of India's greatest rulers, expanded the Maurya Empire across the Indian
+                subcontinent. He is renowned for his conversion to Buddhism after the Kalinga War, promoting
+                non-violence (ahimsa), and inscribing his teachings on stone pillars and edicts, spreading Buddhist
+                principles.</p>
+        </div>
+
+        <!-- Content for The Golden Age of Gupta Empire -->
+        <div class="event-content">
+            <h4>The Golden Age of Gupta Empire (4th to 6th centuries CE)</h4>
+            <p>The Gupta Empire is often referred to as the Golden Age of India. It was a period of remarkable
+                achievements in art, science, mathematics, and literature. Gupta rulers patronized scholars like
+                Aryabhata and Kalidasa, contributing significantly to the fields of astronomy, mathematics, and
+                classical Sanskrit literature.</p>
+        </div>
+    </section>
+
+    <section id="medieval-india" class="card">
+        <h2>Medieval India</h2>
+        <!-- <img src="medieval.jpeg" alt="Medieval India Image" class="image"> -->
+        <p>Medieval India witnessed the rise and fall of several powerful dynasties, including the Mughals and the Delhi
+            Sultanate. Learn about India's medieval art, architecture, and cultural developments.</p>
+        <h3>Major Events in Medieval India</h3>
+        <ul>
+            <li>The Delhi Sultanate (13th to 16th centuries)</li>
+            <li>The Mughal Empire and the reign of Akbar the Great (16th century)</li>
+            <li>The arrival of European powers in India (Portuguese, Dutch, British)</li>
+            <li>The rise of Sikhism under Guru Nanak Dev Ji</li>
+        </ul>
+        <!-- Content for The Delhi Sultanate -->
+        <div class="event-content">
+            <h4>The Delhi Sultanate (13th to 16th centuries)</h4>
+            <p>The Delhi Sultanate was a significant Muslim kingdom that ruled over parts of the Indian subcontinent. It
+                witnessed the construction of iconic structures like the Qutb Minar and the Alai Darwaza. The period
+                also saw notable rulers like Alauddin Khilji and Muhammad bin Tughluq.</p>
+        </div>
+
+        <!-- Content for The Mughal Empire and the reign of Akbar the Great -->
+        <div class="event-content">
+            <h4>The Mughal Empire and the reign of Akbar the Great (16th century)</h4>
+            <p>The Mughal Empire, under the leadership of Akbar the Great, reached its zenith. Akbar was known for his
+                policy of religious tolerance, administrative reforms, and cultural patronage. His reign saw the
+                flourishing of Mughal art and architecture.</p>
+        </div>
+
+        <!-- Content for The arrival of European powers in India -->
+        <div class="event-content">
+            <h4>The arrival of European powers in India (Portuguese, Dutch, British)</h4>
+            <p>European powers, including the Portuguese, Dutch, and British, established trade routes and colonies in
+                India. This marked the beginning of European influence on Indian history and trade relations.</p>
+        </div>
+
+        <!-- Content for The rise of Sikhism under Guru Nanak Dev Ji -->
+        <div class="event-content">
+            <h4>The rise of Sikhism under Guru Nanak Dev Ji</h4>
+            <p>Guru Nanak Dev Ji, the founder of Sikhism, preached the values of equality, social justice, and devotion
+                to one God. His teachings laid the foundation for the Sikh religion, which played a significant role in
+                shaping the socio-religious landscape of India.</p>
+        </div>
+    </section>
+
+    <section id="modern-india" class="card">
+        <h2>Modern India</h2>
+        <!-- <img src="modern.jpeg" alt="Modern India Image" class="image"> -->
+        <p>Modern India's history includes the struggle for independence from British colonial rule led by iconic
+            figures like Mahatma Gandhi. Discover India's journey to becoming a sovereign nation and its achievements in
+            the modern era.</p>
+        <h3>Major Events in Modern India</h3>
+        <ul>
+            <li>The Indian Rebellion of 1857 (First War of Independence)</li>
+            <li>The Non-Cooperation Movement and Civil Disobedience Movement</li>
+            <li>Independence and Partition of India in 1947</li>
+            <li>The Constitution of India and Dr. B.R. Ambedkar's role</li>
+        </ul>
+        <!-- Content for The Indian Rebellion of 1857 -->
+        <div class="event-content">
+            <h4>The Indian Rebellion of 1857 (First War of Independence)</h4>
+            <p>The Indian Rebellion of 1857 marked a significant turning point in India's struggle for independence from
+                British rule. It was a widespread, armed uprising against British colonialism.</p>
+        </div>
+
+        <!-- Content for The Non-Cooperation Movement and Civil Disobedience Movement -->
+        <div class="event-content">
+            <h4>The Non-Cooperation Movement and Civil Disobedience Movement</h4>
+            <p>Mahatma Gandhi led the Non-Cooperation Movement and Civil Disobedience Movement as part of the larger
+                freedom struggle. These movements aimed to resist British rule through nonviolent means and civil
+                disobedience.</p>
+        </div>
+
+        <!-- Content for Independence and Partition of India in 1947 -->
+        <div class="event-content">
+            <h4>Independence and Partition of India in 1947</h4>
+            <p>India gained independence from British rule on August 15, 1947. The subcontinent was partitioned into two
+                separate nations, India and Pakistan, leading to one of the largest mass migrations in history and
+                significant socio-political changes.</p>
+        </div>
+
+        <!-- Content for The Constitution of India and Dr. B.R. Ambedkar's role -->
+        <div class="event-content">
+            <h4>The Constitution of India and Dr. B.R. Ambedkar's role</h4>
+            <p>The Constitution of India, adopted in 1950, is the supreme law of the country. Dr. B.R. Ambedkar, a
+                prominent jurist and leader, played a pivotal role in drafting the Indian Constitution, which embodies
+                the values of justice, liberty, equality, and fraternity.</p>
+        </div>
+    </section>
+
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://www.goodreads.com" target="_blank">Recommended Books</a></li>
+            <li><a href="https://www.youtube.com" target="_blank">Educational Videos</a></li>
+            <li><a href="https://www.lonelyplanet.com" target="_blank">Historical Sites to Visit</a></li>
+            <!-- You can replace these URLs with actual resource links -->
+        </ul>
+    </section>
+    <!-- Add this code where you want the map to appear -->
+    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.905643163239!2d77.59456221420898!3d12.971598890868383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c249d907%3A0x14d6823e6bf4c28f!2sIndia!5e0!3m2!1sen!2sus!4v1594784575931!5m2!1sen!2sus"></iframe>
+
+
+    <footer>
+        <p>&copy; 2023 India History Hub</p>
+    </footer>
+
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // Adjust scroll offset if needed
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        // Open and close image modals
+        const images = document.querySelectorAll('.image');
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        document.body.appendChild(modal);
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                const modalContent = document.createElement('img');
+                modalContent.className = 'modal-content';
+                modalContent.src = image.src;
+                modal.appendChild(modalContent);
+
+                modal.style.display = 'block';
+
+                modalContent.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                    modalContent.remove();
+                });
+            });
+        });
+
+        // Add this script in your <script> section
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks[index].classList.add('active');
+                } else {
+                    navLinks[index].classList.remove('active');
+                }
+            });
+        });
+        // Add this script in your <script> section
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
